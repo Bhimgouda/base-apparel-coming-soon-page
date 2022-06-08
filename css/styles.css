@@ -1,0 +1,266 @@
+html{
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* Color Pallete */
+
+:root{
+    --color-Desaturated-Red: hsl(0, 36%, 70%);
+    --color-Soft-Red: hsl(0, 93%, 68%);
+    --color-Dark-Grayish-Red: hsl(0, 6%, 24%);
+    
+}
+
+body{
+    font-size: 1.4rem;
+    color: var(--color-Desaturated-Red);
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)),
+    linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    
+}
+
+h1{
+    color: var(--color-Dark-Grayish-Red);
+}
+
+.content__heading{
+    margin: 2rem;
+    font-size: 4rem;
+    letter-spacing: 5px;
+}
+
+.content p{
+    margin: 0;
+    line-height: 1.5;
+}
+
+.content__heading span{
+    color: var(--color-Desaturated-Red);
+    font-weight: 300;
+    display: block;
+}
+
+.grid{
+    display: grid;
+}
+
+
+.logo-container--mobile{
+    padding: 2.5rem;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.logo-container{
+    display: none;
+}
+
+.content{
+    max-width: 85vw;
+    margin: 0 auto 3rem;
+
+}
+
+.logo{
+    width: 35%;
+}
+
+.hero-image{
+    background-image: url(../images/hero-mobile.jpg);
+    height: 35vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.input{
+    border: none;
+    outline: 0;
+    background: none;
+    flex-grow: 1;
+    width: 0;
+}
+
+::placeholder{
+    position: relative;
+    top: 1px;
+    color: var(--color-Desaturated-Red);
+}
+
+
+.arrow-icon-container{
+    display: flex;
+    background: var(--color-Soft-Red);
+    width: 64px;
+    height: 36px;
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border-radius: 9999px;
+    padding-right: 12px;
+}
+
+.input-group{
+    border: 1px solid var(--color-Desaturated-Red);
+    display: flex;
+    border-radius: 9999px;
+    padding-left: 3rem;
+    margin: 3rem 0 1rem 0;
+    align-items: center;
+}
+
+.input-group button{
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.15s;
+    border-radius: 9999px;
+}
+
+.input-group button:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px 1px hsl(0, 25%, 64%);
+}
+
+
+
+
+.error-icon{
+    margin: 0.5rem;
+    width: 20px;
+    height: 20px;
+    visibility: hidden;
+}
+
+.error-message{
+    visibility: hidden;
+    font-size: 1.2rem;
+    color: var(--color-Dark-Grayish-Red);
+}
+
+.email-error .error-message{
+    visibility: visible;
+}
+
+.email-error .error-icon{
+    visibility: visible;
+}
+
+
+
+
+@media screen and (min-width:768px) {
+    .card{
+
+        max-width: 1140px;  
+        margin: 0 auto;
+        box-shadow: 0 0 100px 10px hsl(0, 100%, 88%);
+    }
+
+    .content{
+        order: -1;
+        padding:  5rem 20rem 5rem 10rem;
+    }
+
+    .content__heading{
+        margin-left: 0;
+        letter-spacing: 7px;
+    }
+
+    .grid{
+        grid-template-columns: 57% 43%;
+        align-items: center;
+    }
+
+    .logo-container--mobile{
+        display: none;
+    }
+
+    .logo-container{
+        display: block;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 7rem;
+    }
+
+    body{
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    .hero-image{
+        background-image: url(../images/hero-desktop.jpg);
+        background-size: cover;
+        height: 100%;
+    }
+
+    .email-collector{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .arrow-icon-container{
+        width: 84px;
+        height: 48px;
+    }
+
+    .error-message{
+        padding-left: 3.4rem;
+    }
+
+}
+
+.thankyou-page{
+    margin-top: 20rem;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.thankyou-message{
+    font-size: 8rem;
+    color: var(--color-Desaturated-Red);
+}
+
+.thankyou-message span{
+    margin: 5rem;
+    font-size: 4rem;
+    display: block;
+    color: var(--color-Dark-Grayish-Red);
+}
+
+.hero{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.thankyou-visible .email-collector{
+    transform: translateY(-700px);
+}
+
+.thankyou-visible .thankyou-page{
+    transform: translateY(-700px);
+}
+
+.email-collector{
+    transition: all 0.4s;
+}
+
+
+
+
+@media screen and (min-width:768px) {
+    .thankyou-message{
+        font-size: 10rem;
+    }
+}
